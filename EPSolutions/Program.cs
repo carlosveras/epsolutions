@@ -5,8 +5,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TreinamentoContext>(options =>
-                 options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+//builder.Services.AddDbContext<EPSolutionsContext>(options =>
+//                 options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+string? connectionString = builder.Configuration.GetConnectionString("Default");
+ServerVersion serverVersion = ServerVersion.AutoDetect(connectionString);
+
+builder.Services.AddDbContext<EPSolutionsContext>(options => options.UseMySql(connectionString, serverVersion));
 
 
 builder.Services.Configure<MvcViewOptions>(options =>
@@ -49,12 +54,5 @@ app.UseEndpoints(endpoints =>
         defaults: new { controller = "Romaneio", action = "Buscar" });
 
 });
-
-
-
-
-
-
-
 
 app.Run();

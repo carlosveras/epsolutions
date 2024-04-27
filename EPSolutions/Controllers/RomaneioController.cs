@@ -1,4 +1,3 @@
-using Azure;
 using EPSolutions.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +8,9 @@ namespace EPSolutions.Controllers
     public class RomaneioController : Controller
     {
         private readonly ILogger<RomaneioController> _logger;
-        private readonly TreinamentoContext _dbContext;
+        private readonly EPSolutionsContext _dbContext;
 
-        public RomaneioController(ILogger<RomaneioController> logger, TreinamentoContext dbContext)
+        public RomaneioController(ILogger<RomaneioController> logger, EPSolutionsContext dbContext)
         {
             _logger = logger;
             _dbContext = dbContext;

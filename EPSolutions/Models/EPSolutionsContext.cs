@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EPSolutions.Models;
 
-public partial class TreinamentoContext : DbContext
+public partial class EPSolutionsContext : DbContext
 {
-    public TreinamentoContext()
+    public EPSolutionsContext()
     {
     }
 
-    public TreinamentoContext(DbContextOptions<TreinamentoContext> options)
+    public EPSolutionsContext(DbContextOptions<EPSolutionsContext> options)
         : base(options)
     {
     }
@@ -21,8 +21,8 @@ public partial class TreinamentoContext : DbContext
     public DbSet<Romaneio> Romaneios { get; set; }
 
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=Treinamento;User Id=sa;Password=123456;TrustServerCertificate=true;");
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //    => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=Treinamento;User Id=sa;Password=123456;TrustServerCertificate=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

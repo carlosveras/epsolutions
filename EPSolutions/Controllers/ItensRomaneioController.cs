@@ -7,9 +7,9 @@ namespace EPSolutions.Controllers
     public class ItensRomaneioController : Controller
     {
         private readonly ILogger<ItensRomaneioController> _logger;
-        private readonly TreinamentoContext _dbContext;
+        private readonly EPSolutionsContext _dbContext;
 
-        public ItensRomaneioController(ILogger<ItensRomaneioController> logger, TreinamentoContext dbContext)
+        public ItensRomaneioController(ILogger<ItensRomaneioController> logger, EPSolutionsContext dbContext)
         {
             _logger = logger;
             _dbContext = dbContext;
