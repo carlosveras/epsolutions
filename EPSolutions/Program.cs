@@ -38,21 +38,22 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-//app.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=ItensRomaneio}/{action=Index}/{id?}");
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
 
-    endpoints.MapControllerRoute(
-        name: "Romaneio",
-        pattern: "Romaneio/Buscar",
-        defaults: new { controller = "Romaneio", action = "Buscar" });
+//app.UseEndpoints(endpoints =>
+//{
+//    //endpoints.MapControllerRoute(
+//    //    name: "default",
+//    //    pattern: "{controller=Home}/{action=Index}/{id?}");
 
-});
+//    endpoints.MapControllerRoute(
+//        name: "Romaneio",
+//        pattern: "Romaneio/Buscar",
+//        defaults: new { controller = "Romaneio", action = "Buscar" });
+
+//});
 
 app.Run();

@@ -1,4 +1,15 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿if (document.getElementById('tabela-romaneio').getElementsByTagName('tr').length > 1) {
+    ocultarBuscaRomaneio();
+} else {
+    mostrarBuscaRomaneio();
+}
 
-// Write your JavaScript code.
+function ocultarBuscaRomaneio() {
+    document.querySelector('.busca-romaneio').style.display = 'none';
+}
+
+// Função para mostrar a parte de busca do romaneio
+function mostrarBuscaRomaneio() {
+    document.querySelector('.busca-romaneio').style.display = 'block';
+}
+

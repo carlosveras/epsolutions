@@ -7,10 +7,10 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row buscaRomaneio">
         <div class="col-12 col-md-6">
             <form method="get" class="form-inline justify-content-center justify-content-md-start mb-3 mb-md-0" action="/ItensRomaneio/Pesquisar" id="formBusca">
-                <input type="text" id="searchInput" placeholder="Pesquisar por Romaneio" class="form-control form-control-sm mr-2 mr-md-2 mb-2 mb-md-0" name="id" />
+                <input type="text" id="searchInput" placeholder="Informe o nr do Romaneio" class="form-control form-control-sm mr-2 mr-md-2 mb-2 mb-md-0" name="id" />
                 <button type="submit" class="btn btn-sm btn-success my-2 my-sm-0 form-control form-control-sm" id="searchButton">Buscar</button>
             </form>
         </div>
@@ -29,7 +29,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <table class="table table-hover table-striped">
+                    <table class="table table-hover table-striped" id="tabela-romaneio">
                         <thead class="thead-dark">
                             <tr>
                                 <th>Caixa</th>
